@@ -1,0 +1,22 @@
+{
+  "name": "thecrafters001",
+  "version": "0.0.1",
+  "description": "An offline version of TheCrafters001's Website with Extra Features",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCrafters001/website-app.git"
+  },
+  "author": "TheCrafters001",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/TheCrafters001/website-app/issues"
+  },
+  "homepage": "https://github.com/TheCrafters001/website-app#readme",
+  "devDependencies": {
+    "electron": "^15.0.0"
+  }
+}
