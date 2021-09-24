@@ -103,8 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
-# Ignore electron-forge folder
-out/
+# Ignore electron-builder folder
+dist/
 
 # Ignore site for now
 site/

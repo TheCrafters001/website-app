@@ -3,8 +3,17 @@
   "version": "0.0.1",
   "description": "An offline version of TheCrafters001's Website with Extra Features",
   "main": "main.js",
+  "@comments scripts": {
+    "start": "Run the app. Does not build app.",
+    "buildall": "Build for all archs and platforms, even arm. Run command as admin for mac"
+  },
   "scripts": {
-    "start": "electron-forge start"
+    "start": "electron .",
+    "win64": "electron-packager . thecrafters001 --overwrite --platform=win32 --arch=x64 --out=dist --prune=true --icon=assets/ico/icon.png --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"TheCrafters001\"",
+    "win32": "electron-packager . thecrafters001 --overwrite --platform=win32 --arch=ia32 --out=dist --prune=true --icon=assets/ico/icon.png --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"TheCrafters001\"",
+    "lin64": "electron-packager . thecrafters001 --overwrite --platform=linux --arch=x64 --out=dist --prune=true --icon=assets/ico/icon.png --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"TheCrafters001\"",
+    "lin32": "electron-packager . thecrafters001 --overwrite --platform=linux --arch=ia32 --out=dist --prune=true --icon=assets/ico/icon.png --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"TheCrafters001\"",
+    "buildall": "electron-packager . thecrafters001 --overwrite --all --out=dist --prune=true --icon=assets/ico/icon.png --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"TheCrafters001\""
   },
   "repository": {
     "type": "git",
@@ -15,9 +24,10 @@
   "bugs": {
     "url": "https://github.com/TheCrafters001/website-app/issues"
   },
-  "homepage": "https://github.com/TheCrafters001/website-app#readme",
+  "homepage": "https://thecrafters001.github.io/",
   "devDependencies": {
     "electron": "^15.0.0",
-    "electron-builder": "^22.11.7"
+    "electron-osx-sign": "^0.5.0",
+    "electron-packager": "^15.4.0"
   }
 }
