@@ -31,6 +31,7 @@
     "electron-packager": "^15.4.0"
   },
   "dependencies": {
+    "electron-is-dev": "^0.3.0",
     "electron-log": "^4.4.1",
     "update-electron-app": "^2.0.1"
   }
