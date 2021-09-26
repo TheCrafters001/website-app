@@ -103,6 +103,11 @@ dist
 # TernJS port file
 .tern-port
 
+
+# CUSTOM CHANGES
+
+package-lock.json
+
 # Ignore electron-builder folder
 dist/
 
