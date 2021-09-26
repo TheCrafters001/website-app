@@ -1,17 +1,43 @@
+// Start logger first
+const log = require('electron-log');
+log.info("Log started.")
+
+// Change Format
+log.transports.console.format = '[{h}:{i}:{s}.{ms}] [{level}] {text}';
+log.info("Log Formatting Changed")
+
 // Modules to control application life and create native browser window
+// Electron
 const { app, BrowserWindow } = require('electron')
+log.info("Electron Started")
+
+// Path
 const path = require('path')
+log.info("Path Set")
+
+// Update
+require('update-electron-app')()
+log.info("Auto Update Service Started")
+
+// Require Console
+const { Console } = require('console');
 
 // Create the browser window.
 function createWindow () {
     const win = new BrowserWindow({
       width: 800,
       height: 600,
+      autoHideMenuBar: true,
       webPreferences: {
         preload: path.join(__dirname, "assets/js/preload.js")
       }
     })
-  
+
+    log.info("Window Width:", win.width)
+    log.info("Window Height:", win.height)
+    log.info("Menubar:", win.autoHideMenuBar)
+    log.info("Preload:", path.join(__dirname, "assets/js/preload.js"))
+
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
     win.loadFile('index.html')
